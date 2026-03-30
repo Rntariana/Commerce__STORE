@@ -1,0 +1,143 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f1f5f9;
+}
+
+header {
+  background: linear-gradient(135deg, #111827, #1f2937);
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+/* SEARCH */
+.search-box {
+  text-align: center;
+  margin: 15px;
+}
+
+.search-box input {
+  padding: 10px;
+  width: 250px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* LAYOUT */
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* PRODUCTS */
+.products {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.product {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product button {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+/* CART */
+.cart {
+  flex: 1;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  height: fit-content;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  background: #f3f4f6;
+  padding: 6px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+}
+
+.qty-btn {
+  margin: 0 3px;
+  cursor: pointer;
+}
+
+/* BUTTONS */
+.clear {
+  background: red;
+  color: white;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  margin-top: 10px;
+}
+
+.checkout-btn {
+  background: green;
+  color: white;
+  width: 100%;
+  padding: 8px;
+  border: none;
+  margin-top: 10px;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  width: 300px;
+  margin: 15% auto;
+  border-radius: 10px;
+}
+
+.product img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.product:hover img {
+  transform: scale(1.05);
+}

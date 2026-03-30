@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ShopLite Pro+</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>ShopLite Pro+ 🛒</h1>
+  <p>Advanced JavaScript E-Commerce App</p>
+</header>
+
+<!-- SEARCH -->
+<div class="search-box">
+  <input id="searchInput" placeholder="Search products...">
+</div>
+
+<section class="container">
+
+  <div id="products" class="products"></div>
+
+  <div class="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-list"></ul>
+    <h3>Total: R <span id="total">0</span></h3>
+
+    <button onclick="openCheckout()" class="checkout-btn">Checkout</button>
+    <button onclick="clearCart()" class="clear">Clear Cart</button>
+  </div>
+
+</section>
+
+<!-- CHECKOUT MODAL -->
+<div id="checkoutModal" class="modal">
+  <div class="modal-content">
+    <h2>Checkout</h2>
+    <p id="summary"></p>
+    <button onclick="completeOrder()">Confirm Order</button>
+    <button onclick="closeCheckout()">Close</button>
+  </div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
