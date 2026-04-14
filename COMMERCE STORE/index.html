@@ -15,6 +15,7 @@
 <!-- SEARCH -->
 <div class="search-box">
   <input id="searchInput" placeholder="Search products...">
+  <div id="searchSpinner" class="search-spinner"></div>
 </div>
 
 <section class="container">
@@ -37,9 +38,47 @@
   <div class="modal-content">
     <h2>Checkout</h2>
     <p id="summary"></p>
-    <button onclick="completeOrder()">Confirm Order</button>
-    <button onclick="closeCheckout()">Close</button>
+    
+    <form id="checkoutForm" onsubmit="handleCheckoutSubmit(event)">
+      <div class="form-group">
+        <label for="customerName">Full Name</label>
+        <input type="text" id="customerName" required placeholder="John Doe">
+      </div>
+      
+      <div class="form-group">
+        <label for="customerEmail">Email</label>
+        <input type="email" id="customerEmail" required placeholder="john@example.com">
+      </div>
+      
+      <div class="form-group">
+        <label for="customerPhone">Phone</label>
+        <input type="tel" id="customerPhone" required placeholder="+27 123 456 789">
+      </div>
+      
+      <div class="form-group">
+        <label for="customerAddress">Delivery Address</label>
+        <textarea id="customerAddress" required placeholder="123 Main St, City, Province"></textarea>
+      </div>
+      
+      <div class="form-group">
+        <label>
+          <input type="checkbox" id="agreeTerms" required>
+          I agree to the terms and conditions
+        </label>
+      </div>
+      
+      <div class="checkout-buttons">
+        <button type="submit" class="confirm-btn">Confirm Order</button>
+        <button type="button" onclick="closeCheckout()" class="cancel-btn">Cancel</button>
+      </div>
+    </form>
   </div>
+</div>
+
+<!-- LOADING OVERLAY -->
+<div id="loadingOverlay" class="loading-overlay">
+  <div class="loading-spinner"></div>
+  <p>Processing...</p>
 </div>
 
 <script src="index.js"></script>
